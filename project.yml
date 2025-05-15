@@ -1,0 +1,39 @@
+name: SwiftStarterApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 17.0
+
+targets:
+  SwiftStarterApp:
+    type: application
+    platform: iOS
+    sources:
+      - SwiftStarterApp
+    scheme:
+      testTargets:
+        - SwiftStarterAppTests
+    info:
+      path: SwiftStarterApp/Info.plist
+      properties:
+        CFBundleDisplayName: Swift Starter App
+        LSRequiresIPhoneOS: true
+        UILaunchStoryboardName: LaunchScreen
+        UIRequiredDeviceCapabilities: [armv7]
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+
+  SwiftStarterAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - SwiftStarterAppTests
+    dependencies:
+      - target: SwiftStarterApp 

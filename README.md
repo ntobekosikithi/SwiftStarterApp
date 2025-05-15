@@ -93,3 +93,4 @@ Write tests in `PositionCalculatorTests.swift` to verify:
    * 🧪 Unit Testing: Add tests for CompassViewModel, PositionCalculator, and edge cases around heading changes.
    * ⚙️ Settings Screen: Allow user to configure step threshold or toggle live heading updates.
    * 🧭 Better Compass Visuals: Add intermediate ticks, smoother gradients, or 3D-style UI for a more realistic compass.
+   * Reset button top reset the step count.
